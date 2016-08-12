@@ -2,7 +2,7 @@ import { Pipe, PipeTransform } from 'angular2/core';
 import { Meal } from './meal.model';
 
 @Pipe({
-  name: "calorie-count",
+  name: "calorieCount",
   pure: false
 })
 export class CalorieCountPipe implements PipeTransform {
