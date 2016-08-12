@@ -1,0 +1,17 @@
+{
+  "name": "meal-tracker",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Olivia Hinton <hinton.olivia@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
