@@ -1,3 +1,6 @@
+$red : #d9534f;
+$green : #5cb85c;
+
 #loading {
   text-align: center;
   padding-top: 100px;
@@ -23,9 +26,9 @@ h1 {
 }
 
 .high-calorie {
-  color: red;
+  color: $red;
 }
 
 .low-calorie {
-  color: green;
+  color: $green;
 }
