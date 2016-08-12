@@ -12,6 +12,10 @@ import { CalorieCountPipe } from './calorie-count.pipe';
   directives:[MealComponent, EditMealDetailsComponent, NewMealComponent],
   pipes: [CalorieCountPipe],
   template: `
+  <new-meal (onSubmitNewMeal)="createMeal($event)">
+  </new-meal>
+  <hr>
+
   <div class="form-group">
     <label for="meal-filter">Filter your meals by calorie count:</label>
     <select id="meal-filter" class="form-control" (change)="onChange($event.target.value)">
@@ -29,9 +33,6 @@ import { CalorieCountPipe } from './calorie-count.pipe';
 
   <edit-meal-details *ngIf="selectedMeal" [meal]="selectedMeal">
   </edit-meal-details>
-
-  <new-meal (onSubmitNewMeal)="createMeal($event)">
-  </new-meal>
   `
 })
 export class MealListComponent {
