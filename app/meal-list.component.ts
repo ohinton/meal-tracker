@@ -20,7 +20,7 @@ import { CalorieCountPipe } from './calorie-count.pipe';
 
   <meal-display *ngFor="#currentMeal of mealList | calorieCount:selectedCalorieCount" (click)="mealClicked(currentMeal)"
   [meal] = "currentMeal"
-  [class.high-calorie]="currentMeal.calories <= 500">
+  [class.high-calorie]="currentMeal.calories >= 500">
   </meal-display>
 
   <edit-meal-details *ngIf="selectedMeal" [meal]="selectedMeal">
