@@ -1,0 +1,31 @@
+#loading {
+  text-align: center;
+  padding-top: 100px;
+  font-size: 50px;
+  font-weight: lighter;
+  font-family: monospace;
+}
+
+img {
+  max-height: 75px;
+  padding-right: 25px;
+}
+
+h1 {
+  font-family: monospace;
+  font-weight: lighter;
+  font-size: 75px;
+}
+
+.meal-form {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.high-calorie {
+  color: red;
+}
+
+.low-calorie {
+  color: green;
+}

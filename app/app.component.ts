@@ -7,10 +7,13 @@ import {MealListComponent} from './meal-list.component'
   directives: [MealListComponent],
   template:`
     <div class="container">
-      <h1>My Food Diary</h1>
-      <meal-list [mealList]="meals"
-      (onMealSelect)="mealWasSelected($event)">
-      </meal-list>
+      <h1><img src="http://bit.ly/2bnW4sa" alt="red apple">My Food Diary</h1>
+      <hr>
+
+        <meal-list [mealList]="meals"
+        (onMealSelect)="mealWasSelected($event)">
+        </meal-list>
+
     </div>
   `
 })

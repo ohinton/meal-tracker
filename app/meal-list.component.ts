@@ -12,15 +12,19 @@ import { CalorieCountPipe } from './calorie-count.pipe';
   directives:[MealComponent, EditMealDetailsComponent, NewMealComponent],
   pipes: [CalorieCountPipe],
   template: `
-  <select (change)="onChange($event.target.value)">
-    <option value="all" selected="selected">Show All Meals</option>
-    <option value="high-calorie">Show High Calorie Meals</option>
-    <option value="low-calorie">Show Low Calorie Meals</option>
-  </select>
+  <div class="form-group">
+    <label for="meal-filter">Filter your meals by calorie count:</label>
+    <select id="meal-filter" class="form-control" (change)="onChange($event.target.value)">
+      <option value="all" selected="selected">Show All Meals</option>
+      <option value="high-calorie">Show High Calorie Meals (More than 500 calories)</option>
+      <option value="low-calorie">Show Low Calorie Meals (Less than 500 calories)</option>
+    </select>
+  </div>
 
   <meal-display *ngFor="#currentMeal of mealList | calorieCount:selectedCalorieCount" (click)="mealClicked(currentMeal)"
   [meal] = "currentMeal"
-  [class.high-calorie]="currentMeal.calories >= 500">
+  [class.high-calorie]="currentMeal.calories >= 500"
+  [class.low-calorie]="currentMeal.calories < 500">
   </meal-display>
 
   <edit-meal-details *ngIf="selectedMeal" [meal]="selectedMeal">
